@@ -1,0 +1,19 @@
+setcpm(130/4)
+
+samples('github:mot4i/garden')
+// samples('github:mot4i/garden')
+
+$: sound("[bd <bd bd oh:2*2>] bd*3")
+  .lpf(7000)
+  // .lpf(400)
+
+
+_$: sound("bd:8 (3,8)")
+  .lpf(" 400")
+  .hpf(1000)
+  .bank("garden")
+  .jux(rev)
+
+$: sound("[- hh]*4")
+
+_$: s("casio(3,8) -")
